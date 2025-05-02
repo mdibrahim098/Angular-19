@@ -10,5 +10,8 @@ import { TestComponent } from "./test/test.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'myAngularProject';
+  title = 'Gretting,';
+  msg = 'Welcome to Angular 18 series.'
+
+  
 }
