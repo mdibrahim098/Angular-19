@@ -10,8 +10,8 @@ import { TestComponent } from "./test/test.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Gretting,';
-  msg = 'Welcome to Angular 18 series.'
-
-  
+  // title = 'Gretting,';
+  // msg = 'Welcome to Angular 18 series.'
+  inputValue : string = "Hello" 
+  IsDisabled : boolean = false;
 }
