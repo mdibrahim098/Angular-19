@@ -18,3 +18,18 @@ import { CourseCardComponent } from "./course-card/course-card.component";
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+export interface Course {
+  id: number;
+  description: string;
+  title: string;
+  iconUrl: string;
+  category: string;
+  lessonsCount: number;
+  longDescription?: string;
+  promo?: boolean;
+  url?: string;
+  courseListIcon?: string;
+  courseListImage?: string;           
+
+}

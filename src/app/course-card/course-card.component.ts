@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Course } from '../app.module';
 
 @Component({
   selector: 'course-card',
@@ -9,9 +10,18 @@ import { Component, Input } from '@angular/core';
 export class CourseCardComponent {
 
   
-    @Input() title: string;
-    constructor() { }
+    @Input({
+      required: true
+    }) 
+
+    course: Course;
+
+    constructor() {
+
+     }
+     
       ngOnInit() {
+
       }
 
 

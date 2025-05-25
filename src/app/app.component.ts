@@ -7,6 +7,7 @@ import {COURSES} from '../db-data';
     styleUrls: ['./app.component.css'],
     standalone: false
 })
+
 export class AppComponent {
 
           coreCourse = COURSES[0];
