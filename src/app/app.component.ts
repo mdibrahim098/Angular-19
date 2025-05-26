@@ -11,7 +11,7 @@ import { Course } from './app.module';
 
 export class AppComponent {
   
-          courses = COURSES;
+          courses = [...COURSES];
 
        onCourseSelected(course: Course) {
         console.log('Card clicked!',course);
