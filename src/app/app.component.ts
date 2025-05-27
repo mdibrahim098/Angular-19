@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, EventEmitter } from '@angular/core';
 import {COURSES} from '../db-data';
 import { Course } from './app.module';
 
@@ -10,16 +10,23 @@ import { Course } from './app.module';
 })
 
 export class AppComponent {
-  
-          courses = [...COURSES];
 
+       @Input()
+        courses = COURSES;
+
+    
+
+
+        constructor() {
+        }
+        courseEmitter = new EventEmitter<Course>();
+
+        ngOnInit() {
+        }
        onCourseSelected(course: Course) {
         console.log('Card clicked!',course);
        }
 
-       trackCourse(index: number, course: Course) {
-        return course.id;
-       }
 
 }
 

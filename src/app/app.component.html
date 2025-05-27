@@ -7,20 +7,16 @@
 
 <div class="courses">
 
-     @for (course of courses; track $index; let index = $index; 
-     let count =$count; let first =$first; let last = $last;
-     let even = $even; let odd = $odd) {
 
-    <course-card 
-     [course]="course" 
-     [index] ="index"
-     (courseSelected)="onCourseSelected($event)"/>
-    
-    }
+    <course-card *ngFor="let course of courses; index as i;
+     first as isFirst; last as isLast;
+      even as Iseven; odd as IsOdd"
+      [class.is-first]="isFirst" [class.is-last]="isLast"
+      [class.is-even]="Iseven" [class.is-odd]="IsOdd"
+      (courseViewed)="onCourseViewed($event)"
+    (courseSelected)="onCourseSelected($event)"
+     [course]="course" [cardIndex]="i+1"></course-card>
 
-    @empty {
-        <h1>No courses found!</h1>
-    }
 
    
 </div>
