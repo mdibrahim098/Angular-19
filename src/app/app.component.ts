@@ -17,5 +17,9 @@ export class AppComponent {
         console.log('Card clicked!',course);
        }
 
+       trackCourse(index: number, course: Course) {
+        return course.id;
+       }
+
 }
 
