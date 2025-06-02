@@ -5,15 +5,14 @@
 
 </div>
 
+
 <div class="courses">
 
 
-    <course-card *ngFor="let course of courses; index as i"
-      (courseViewed)="onCourseViewed($event)"
-    (courseSelected)="onCourseSelected($event)"
-     [course]="course" [cardIndex]="i+1"></course-card>
-
-
+    <course-card 
+    *ngFor="let course of courses; index as i"    
+            (courseSelected)="onCourseSelected($event)"
+            [course]="course" [cardIndex]="i+1"></course-card>
    
 </div>
 

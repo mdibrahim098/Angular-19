@@ -12,10 +12,7 @@ import { Course } from './app.module';
 export class AppComponent {
 
        @Input()
-        courses = COURSES;
-
-    
-
+         courses = COURSES;
 
         constructor() {
         }
