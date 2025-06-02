@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import {COURSES} from '../db-data';
 import { Course } from './app.module';
 import { CourseCardComponent } from './course-card/course-card.component';
@@ -15,14 +15,13 @@ export class AppComponent {
        @Input()
          courses = COURSES;
 
-        @ViewChild(CourseCardComponent)
-         card: CourseCardComponent;
+        
 
-
-
+         @ViewChild('container')
+         containerDiv :ElementRef
  
        onCourseSelected(course: Course) {
-        console.log('Card clicked!',course);
+        console.log('Card clicked!', this.containerDiv);
        }
 
 
