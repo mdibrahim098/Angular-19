@@ -1,6 +1,7 @@
-import { Component, Input, EventEmitter } from '@angular/core';
+import { Component, Input, EventEmitter, ViewChild } from '@angular/core';
 import {COURSES} from '../db-data';
 import { Course } from './app.module';
+import { CourseCardComponent } from './course-card/course-card.component';
 
 @Component({
     selector: 'app-root',
@@ -14,12 +15,12 @@ export class AppComponent {
        @Input()
          courses = COURSES;
 
-        constructor() {
-        }
-        courseEmitter = new EventEmitter<Course>();
+        @ViewChild(CourseCardComponent)
+         card: CourseCardComponent;
 
-        ngOnInit() {
-        }
+
+
+ 
        onCourseSelected(course: Course) {
         console.log('Card clicked!',course);
        }

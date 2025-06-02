@@ -10,9 +10,12 @@
 
 
     <course-card 
-    *ngFor="let course of courses; index as i"    
+ 
             (courseSelected)="onCourseSelected($event)"
-            [course]="course" [cardIndex]="i+1"></course-card>
+            [course]="courses[0]"
+            [cardIndex]="0">
+
+    </course-card>
    
 </div>
 
