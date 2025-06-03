@@ -9,7 +9,7 @@
 <div class="courses" #container>
 
 
-    <course-card 
+    <course-card #card1
             *ngFor="let course of courses; let i = index"
             (courseSelected)="onCourseSelected($event)"
             [course]="course">
